@@ -11,18 +11,18 @@
                     onclick='
                     //*** YOUR JAVASCRIPT CODE HERE ***
                     //Grab the value from the input element above and determine if the user is old enough to visit this site.
-                    ageInputHTML = document.getElementById("ageInput")
-                    userAge = ageInputHTML.value;
+                    let ageInputHTML = document.getElementById("ageInput")
+                    let userAge = ageInputHTML.value;
 
-                    userIsAdult = userAge >= 18;
-                    userIsYoungChild = userAge <= 13;
+                    let userIsAdult = userAge >= 18;
+                    let userIsYoungChild = userAge <= 13;
 
                     if(userIsAdult){
                         ageGateModal.style.display = "none";
                     } else if(userIsYoungChild){         
                         location.replace("https://pbskids.org/");
                     } else {
-                        ageGateContentHTML = document.getElementById("ageGateContent");
+                        let ageGateContentHTML = document.getElementById("ageGateContent");
                         ageGateContentHTML.innerHTML = "<h1>You are too young to proceed. Please leave.</h1>";
                     } 
 
